@@ -1,6 +1,6 @@
-# RentMate Web App
+# Web App Base
 
-Front-end web app server for RentMate
+Front-end base web app server
 
 ## Stack
 
