@@ -1,6 +1,6 @@
 # Web App Base
 
-Front-end base web app server
+Base front-end web app server
 
 ## Stack
 

@@ -1,12 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'app/js/app.jsx'),
-    vendor: [ 'react', 'react-dom', 'babel-polyfill' ],
+    vendor: [ 'react', 'prop-types', 'react-dom', 'redux', 'react-redux', 'react-router-dom', 'babel-polyfill', 'whatwg-fetch' ],
     styles: path.resolve(__dirname, 'app/css/main.scss'),
+  },
+  resolve: {
+    extensions: [ '.js', '.jsx' ],
   },
   devtool: 'source-map',
   output: {
@@ -53,6 +57,9 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'css/[name].min.css',
       allChunks: true,
+    }),
+    new Dotenv({
+      path: path.resolve(__dirname, '.env'),
     }),
   ],
 };
