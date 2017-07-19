@@ -25,8 +25,8 @@ class NavBar extends React.Component {
     return (
       <div className="navbar">
         <NavLink exact to="/"> Home </NavLink>
-        { ! isAuthenticated ? <NavLink exact to="/login"> Login </NavLink> : null }
-        { ! isAuthenticated ? <NavLink exact to="/register"> Register </NavLink> : null }
+        { !isAuthenticated ? <NavLink exact to="/login"> Login </NavLink> : null }
+        { !isAuthenticated ? <NavLink exact to="/register"> Register </NavLink> : null }
         { isAuthenticated ? <a href="#" onClick={this.handleLogout}> Logout </a> : null }
       </div>
     );
